@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -293,6 +293,7 @@ MonoBehaviour:
   - Verb
   - Possessive Pronoun
   - Noun
+  baseURL: localhost:3000
 --- !u!4 &2118906475
 Transform:
   m_ObjectHideFlags: 0
