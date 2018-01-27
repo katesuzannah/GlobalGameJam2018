@@ -1,0 +1,25 @@
+{
+  "name": "ggj-game",
+  "version": "1.0.0",
+  "description": "Global Game Jam 2018 for Marcus Zaeyen Guimaraes & team",
+  "main": "player.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katesuzannah/GlobalGameJam2018.git"
+  },
+  "author": "Marcus Zaeyen Guimaraes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katesuzannah/GlobalGameJam2018/issues"
+  },
+  "homepage": "https://github.com/katesuzannah/GlobalGameJam2018#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "hbs": "^4.0.1",
+    "socket.io": "^2.0.4"
+  }
+}
