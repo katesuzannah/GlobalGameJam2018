@@ -7,13 +7,15 @@ public class InterfaceWithServer : MonoBehaviour {
 
 	public float timer;
 	public string[] partsOfSpeech;
+	int count;
 
 	void Start () {
-		StartCoroutine (GetWords ());
+		//StartCoroutine (GetWords ());
+		count = 0;
 	}
 		
 	IEnumerator GetWords() {
-		UnityWebRequest www = UnityWebRequest.Get ("https://i6.cims.nyu.edu/~kss394/");
+		UnityWebRequest www = UnityWebRequest.Get ("https://i6.cims.nyu.edu/~kss394/transmission.html");
 		yield return www.SendWebRequest ();
 		if (www.isNetworkError || www.isHttpError) {
 			Debug.Log (www.error);
@@ -23,12 +25,12 @@ public class InterfaceWithServer : MonoBehaviour {
 		}
 	}
 
-	IEnumerator Upload() {
+	IEnumerator Upload(int wordNumber) {
 		List<IMultipartFormSection> formData = new List<IMultipartFormSection> ();
-		string prompt = choosePrompt ();
+		string prompt = partsOfSpeech [wordNumber];
 		formData.Add (new MultipartFormDataSection ("field1="+prompt));
 		//formData.Add (new MultipartFormFileSection ("my file data", "myfile.txt"));
-		UnityWebRequest www = UnityWebRequest.Post ("https://i6.cims.nyu.edu/~kss394/", formData);
+		UnityWebRequest www = UnityWebRequest.Post ("https://i6.cims.nyu.edu/~kss394/transmission.html", formData);
 		yield return www.SendWebRequest ();
 		if (www.isNetworkError || www.isHttpError) {
 			Debug.Log (www.error);
@@ -36,16 +38,20 @@ public class InterfaceWithServer : MonoBehaviour {
 		else {
 			Debug.Log ("Form upload complete");
 		}
-		Debug.Log (formData [0]);
 	}
 
-	public string choosePrompt() {
-		return partsOfSpeech [Random.Range (0, partsOfSpeech.Length)];
-	}
+//	public string choosePrompt(int wordNumber) {
+//		//return partsOfSpeech [Random.Range (0, partsOfSpeech.Length)];
+//		return partsOfSpeech [wordNumber];
+//	}
 
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Space)) {
-			Upload ();
+			StartCoroutine(Upload(count));
+			count++;
+			if (count>partsOfSpeech.Length) {
+				count = 0;
+			}
 		}
 	}
 }
