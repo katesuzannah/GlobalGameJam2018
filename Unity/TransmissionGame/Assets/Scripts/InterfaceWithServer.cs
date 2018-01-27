@@ -9,13 +9,15 @@ public class InterfaceWithServer : MonoBehaviour {
 	public string[] partsOfSpeech;
 	int count;
 
+	public string baseURL = "https://i6.cims.nyu.edu/~kss394/Digestion/opt/GlobalGameJam2018/JS";
+
 	void Start () {
 		//StartCoroutine (GetWords ());
 		count = 0;
 	}
 		
 	IEnumerator GetWords() {
-		UnityWebRequest www = UnityWebRequest.Get ("https://i6.cims.nyu.edu/~kss394/transmission.html");
+		UnityWebRequest www = UnityWebRequest.Get (baseURL+"/api/endround");
 		yield return www.SendWebRequest ();
 		if (www.isNetworkError || www.isHttpError) {
 			Debug.Log (www.error);
@@ -30,13 +32,15 @@ public class InterfaceWithServer : MonoBehaviour {
 		string prompt = partsOfSpeech [wordNumber];
 		formData.Add (new MultipartFormDataSection ("field1="+prompt));
 		//formData.Add (new MultipartFormFileSection ("my file data", "myfile.txt"));
-		UnityWebRequest www = UnityWebRequest.Post ("https://i6.cims.nyu.edu/~kss394/transmission.html", formData);
+		UnityWebRequest www = UnityWebRequest.Post (baseURL+"/api/startround", formData);
 		yield return www.SendWebRequest ();
 		if (www.isNetworkError || www.isHttpError) {
 			Debug.Log (www.error);
+			Debug.Log(www);
 		}
 		else {
 			Debug.Log ("Form upload complete");
+			Debug.Log(www.downloadHandler.text);
 		}
 	}
 
@@ -52,6 +56,9 @@ public class InterfaceWithServer : MonoBehaviour {
 			if (count>partsOfSpeech.Length) {
 				count = 0;
 			}
+		}
+		if (Input.GetKeyDown(KeyCode.E)) {
+			StartCoroutine(GetWords());
 		}
 	}
 }

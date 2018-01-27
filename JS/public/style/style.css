@@ -1,0 +1,11 @@
+input {
+	display: none;
+}
+
+body {
+	background-color: lightblue;
+}
+
+.invis {
+	visibility: hidden;
+}
