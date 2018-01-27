@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ff88278b66eb0b7479257201b1cb5f77
-timeCreated: 1517079001
+timeCreated: 1517078384
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -45,7 +45,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 894, y: 408, z: 835, w: 416}
+  spriteBorder: {x: 899, y: 416, z: 840, w: 417}
   spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -86,10 +86,37 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline: []
+    outline:
+    - - {x: -167.13867, y: 349.11142}
+      - {x: -168.16406, y: 346.03555}
+      - {x: -168.16406, y: -347.06082}
+      - {x: -165.08789, y: -350.13672}
+      - {x: 222.50977, y: -350.13672}
+      - {x: 224.56055, y: -348.08612}
+      - {x: 224.56055, y: 349.11142}
     physicsShape: []
   spritePackingTag: 
   userData: 
