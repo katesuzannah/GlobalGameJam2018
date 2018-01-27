@@ -42,12 +42,12 @@ public class VoiceRSSTextToSpeech : MonoBehaviour
         string url = "http://api.voicerss.org/?key=" + APIKey + "&hl=en-us&src=" + result + "&c=MP3&f=48khz_16bit_mono";
         WWW www = new WWW(url);
         yield return www;
-        clip = WWWAudioExtensions.GetAudioClip(www, false, false, AudioType.MPEG);
+		clip = www.GetAudioClip(false, false, AudioType.OGGVORBIS);
 #else
         string url = "http://api.voicerss.org/?key=" + APIKey + "&hl=en-us&src=" + result + "&c=OGG&f=48khz_16bit_mono";
         WWW www = new WWW(url);
         yield return www;
-        clip = WWWAudioExtensions.GetAudioClip(www, false, false, AudioType.OGGVORBIS);
+		clip = www.GetAudioClip(false, false, AudioType.OGGVORBIS);
 #endif
         audSrc.clip = clip;
         audSrc.Play();
@@ -84,7 +84,7 @@ public class VoiceRSSTextToSpeech : MonoBehaviour
         string url = "http://api.voicerss.org/?key=" + APIKey + "&hl=en-us&src=" + result + "&c=OGG&f=48khz_16bit_mono";
         WWW www = new WWW(url);
         yield return www;
-        clip = WWWAudioExtensions.GetAudioClip(www, false, false, AudioType.OGGVORBIS);
+		clip = www.GetAudioClip(false, false, AudioType.OGGVORBIS);
 #endif
         theClient.SendMessage(recieptMessage, clip);
     }
