@@ -17,8 +17,10 @@ public class spinningSlot : MonoBehaviour {
 	public Sprite handleUp;//slot machine sprite in neutral 
 	public Sprite handleDown;//slot machine sprite pushed down
 
+	bool isSpinning;
 	int randomSlot;
 
+	int spinTimer=300;
 	// Use this for initialization
 	void Start () {
 		
@@ -26,7 +28,19 @@ public class spinningSlot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.Space)) {
+		Debug.Log (spinTimer);
+		if (Input.GetKeyDown (KeyCode.Space)) {
+
+
+			//handle.transform.position = new Vector2 (handle.transform.position.x, handle.transform.position.y-10);
+			handle.sprite = handleDown;
+			spinTimer = 300;
+			isSpinning = true;
+
+		}
+
+		if (isSpinning == true) {
+			spinTimer--;
 			slotText1.text = "";
 			slotText2.text = "";
 			slotText3.text = "";
@@ -36,17 +50,16 @@ public class spinningSlot : MonoBehaviour {
 
 			randomSlot = Random.Range (0, 3);
 			Debug.Log (randomSlot);
-			slot[0].sprite = slot1Blur[randomSlot];
-			slot [1].sprite = slot1Blur[randomSlot];
-			slot[2].sprite = slot1Blur[randomSlot];
-			slot [3].sprite = slot1Blur[randomSlot];
-			slot[4].sprite = slot1Blur[randomSlot];
-			slot [5].sprite = slot1Blur[randomSlot];
 
-			//handle.transform.position = new Vector2 (handle.transform.position.x, -1);
-			handle.sprite = handleDown;
-		}
-		if (Input.GetKeyUp (KeyCode.Space)) {
+			slot [0].sprite = slot1Blur [randomSlot];
+			slot [1].sprite = slot1Blur [randomSlot];
+			slot [2].sprite = slot1Blur [randomSlot];
+			slot [3].sprite = slot1Blur [randomSlot];
+			slot [4].sprite = slot1Blur [randomSlot];
+			slot [5].sprite = slot1Blur [randomSlot];
+
+		} 
+		if(isSpinning==false) {
 			slotText1.text = "You";
 			slotText2.text = "never";
 			slotText3.text = "digested";
@@ -60,6 +73,13 @@ public class spinningSlot : MonoBehaviour {
 			slot [3].sprite = originalSlot;
 			slot [4].sprite = originalSlot;
 			slot [5].sprite = originalSlot;
+		}
+
+		if (spinTimer==0) {
+			isSpinning = false;
+		}
+		if (Input.GetKeyUp (KeyCode.Space)) {
+			
 
 			handle.sprite = handleUp;
 		}
