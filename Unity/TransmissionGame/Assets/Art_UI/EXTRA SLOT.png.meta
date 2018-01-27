@@ -1,0 +1,1137 @@
+fileFormatVersion: 2
+guid: 9bdd82632cdd0c9468e69d82f0eda6f4
+timeCreated: 1517079657
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: EXTRA SLOT_0
+    21300002: EXTRA SLOT_1
+    21300004: EXTRA SLOT_2
+    21300006: EXTRA SLOT_3
+    21300008: EXTRA SLOT_4
+    21300010: EXTRA SLOT_5
+    21300012: EXTRA SLOT_6
+    21300014: EXTRA SLOT_7
+    21300016: EXTRA SLOT_8
+    21300018: EXTRA SLOT_9
+    21300020: EXTRA SLOT_10
+    21300022: EXTRA SLOT_11
+    21300024: EXTRA SLOT_12
+    21300026: EXTRA SLOT_13
+    21300028: EXTRA SLOT_14
+    21300030: EXTRA SLOT_15
+    21300032: EXTRA SLOT_16
+    21300034: EXTRA SLOT_17
+    21300036: EXTRA SLOT_18
+    21300038: EXTRA SLOT_19
+    21300040: EXTRA SLOT_20
+    21300042: EXTRA SLOT_21
+    21300044: EXTRA SLOT_22
+    21300046: EXTRA SLOT_23
+    21300048: EXTRA SLOT_24
+    21300050: EXTRA SLOT_25
+    21300052: EXTRA SLOT_26
+    21300054: EXTRA SLOT_27
+    21300056: EXTRA SLOT_28
+    21300058: EXTRA SLOT_29
+    21300060: EXTRA SLOT_30
+    21300062: EXTRA SLOT_31
+    21300064: EXTRA SLOT_32
+    21300066: EXTRA SLOT_33
+    21300068: EXTRA SLOT_34
+    21300070: EXTRA SLOT_35
+    21300072: EXTRA SLOT_36
+    21300074: EXTRA SLOT_37
+    21300076: EXTRA SLOT_38
+    21300078: EXTRA SLOT_39
+    21300080: EXTRA SLOT_40
+    21300082: EXTRA SLOT_41
+    21300084: EXTRA SLOT_42
+    21300086: EXTRA SLOT_43
+    21300088: EXTRA SLOT_44
+    21300090: EXTRA SLOT_45
+    21300092: EXTRA SLOT_46
+    21300094: EXTRA SLOT_47
+    21300096: EXTRA SLOT_48
+    21300098: EXTRA SLOT_49
+    21300100: EXTRA SLOT_50
+    21300102: EXTRA SLOT_51
+    21300104: EXTRA SLOT_52
+    21300106: EXTRA SLOT_53
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.52278435, y: 0.4947957}
+  spriteBorder: {x: 53, y: 105, z: 55, w: 77}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EXTRA SLOT_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 597
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 19}
+        - {x: 20, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 21}
+        - {x: 22, y: 21}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 597
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 21}
+        - {x: -32, y: 21}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 597
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 21}
+        - {x: -32, y: 21}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 597
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 21}
+        - {x: -32, y: 21}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 597
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 21}
+        - {x: -32, y: 21}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 597
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -32}
+        - {x: 11, y: -32}
+        - {x: 11, y: 19}
+        - {x: 9, y: 21}
+        - {x: -32, y: 21}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 533
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 32}
+        - {x: 20, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 533
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 533
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 533
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 533
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_11
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 533
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: -32}
+        - {x: 11, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 469
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 32}
+        - {x: 20, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 469
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 469
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 469
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 469
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_17
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 469
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: -32}
+        - {x: 11, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 405
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 32}
+        - {x: 20, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 405
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 405
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 405
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 405
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_23
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 405
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: -32}
+        - {x: 11, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 341
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 32}
+        - {x: 20, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 341
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 341
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 341
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 341
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_29
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 341
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: -32}
+        - {x: 11, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 277
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 32}
+        - {x: 20, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_31
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 277
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_32
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 277
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_33
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 277
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_34
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 277
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_35
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 277
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: -32}
+        - {x: 11, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 213
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 32}
+        - {x: 20, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_37
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 213
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_38
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 213
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_39
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 213
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_40
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 213
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_41
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 213
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: -32}
+        - {x: 11, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 149
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 32}
+        - {x: 20, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_43
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 149
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 149
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_45
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 149
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_46
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 149
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_47
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 149
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: -32}
+        - {x: 11, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 85
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 32}
+        - {x: 20, y: -7}
+        - {x: 22, y: -9}
+        - {x: 32, y: -9}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_49
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 85
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -9}
+        - {x: 32, y: -9}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_50
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 85
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -9}
+        - {x: 32, y: -9}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_51
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 85
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -9}
+        - {x: 32, y: -9}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_52
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 85
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -9}
+        - {x: 32, y: -9}
+        - {x: 32, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EXTRA SLOT_53
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 85
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -9}
+        - {x: 9, y: -9}
+        - {x: 11, y: -7}
+        - {x: 11, y: 32}
+      physicsShape: []
+      tessellationDetail: 0
+    outline:
+    - - {x: -155, y: 287.5}
+      - {x: -155, y: -254.5}
+      - {x: 154, y: -254.5}
+      - {x: 156, y: -252.5}
+      - {x: 156, y: 285.5}
+      - {x: 154, y: 287.5}
+    physicsShape:
+    - - {x: -155, y: 287.5}
+      - {x: -155, y: -254.5}
+      - {x: 156, y: -254.5}
+      - {x: 156, y: 287.5}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
