@@ -187,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normal: {fileID: 2100000, guid: dfd43d7cf9e3c4599a72bd8101d6c3ef, type: 2}
   flash: {fileID: 2100000, guid: 04e1fae94b97e4b68964b1918a56203e, type: 2}
+  flashing: 0
 --- !u!23 &127274129
 MeshRenderer:
   m_ObjectHideFlags: 0
