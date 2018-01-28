@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour {
 
 	public ServerComm serv;
 
+	public Canvas slotMachine;
+	public ChooseRandomWord slotManager;
+	public HandleAnimation lever;
 	public VoiceRSSTextToSpeech TTS;
 	public AudioSource Bot1Source;
 	public AudioSource Bot2Source;
@@ -18,6 +21,7 @@ public class GameManager : MonoBehaviour {
 	void Start() {
 		EnterState(State.ZoomedOut);
 		currTurn = Turn.Bot1;
+		slotMachine.gameObject.SetActive(false);
 	}
 
 	void Update() {
@@ -39,7 +43,7 @@ public class GameManager : MonoBehaviour {
 	public enum State {
 		ZoomedOut,
 		ZoomedIn,
-		ShowSlotMachine,
+//		ShowSlotMachine,
 		BuildingSentence,
 		Speaking
 	}
@@ -63,6 +67,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void EnterState(State state) {
+		Debug.Log("Entering state " + state.ToString());
 		ExitState(currState);
 		currState = state;
 		switch (state) {
@@ -73,9 +78,9 @@ public class GameManager : MonoBehaviour {
 		case State.ZoomedIn:
 			EnterZoomedIn();
 			break;
-		case State.ShowSlotMachine:
-			EnterSlotMachine();
-			break;
+//		case State.ShowSlotMachine:
+//			EnterSlotMachine();
+//			break;
 		case State.BuildingSentence:
 			EnterBuildingSentence();
 			break;
@@ -95,9 +100,9 @@ public class GameManager : MonoBehaviour {
 		case State.ZoomedIn:
 			RunZoomedIn();
 			break;
-		case State.ShowSlotMachine:
-			RunSlotMachine();
-			break;
+//		case State.ShowSlotMachine:
+//			RunSlotMachine();
+//			break;
 		case State.BuildingSentence:
 			RunBuildingSentence();
 			break;
@@ -116,9 +121,9 @@ public class GameManager : MonoBehaviour {
 		case State.ZoomedIn:
 			ExitZoomedIn();
 			break;
-		case State.ShowSlotMachine:
-			ExitSlotMachine();
-			break;
+//		case State.ShowSlotMachine:
+//			ExitSlotMachine();
+//			break;
 		case State.BuildingSentence:
 			ExitBuildingSentence();
 			break;
@@ -170,7 +175,8 @@ public class GameManager : MonoBehaviour {
 	void RunZoomedIn() {
 		zoomedInTimer -= Time.deltaTime;
 		if (zoomedInTimer <= 0f) {
-			EnterState(State.ShowSlotMachine);
+//			EnterState(State.ShowSlotMachine);
+			EnterState(State.BuildingSentence);
 		}
 	}
 
@@ -180,17 +186,19 @@ public class GameManager : MonoBehaviour {
 
 	//----------SlotMachine------------//
 
-	void EnterSlotMachine() {
 
-	}
 
-	void RunSlotMachine() {
-
-	}
-
-	void ExitSlotMachine() {
-
-	}
+//	void EnterSlotMachine() {
+//		slotMachine.gameObject.SetActive(true);
+//	}
+//
+//	void RunSlotMachine() {
+//
+//	}
+//
+//	void ExitSlotMachine() {
+//		slotMachine.gameObject.SetActive(false);
+//	}
 
 	//----------BuildingSentence------------//
 
@@ -200,6 +208,16 @@ public class GameManager : MonoBehaviour {
 		//c. end round
 		//d. choose random submitted word
 		//e. display
+
+	/*
+	 * anim slots:
+	 * SpinOneSlot is on each slot
+	 * 		StartSpinning --starts it spinning
+	 * 		StopSpinning --stops it
+	 * handleAnimation:
+	 * 		PullHandle: moves handle down
+	 * 		ReleaseHandle: moves it up
+	 */
 
 	string sentence;
 	public int wordsPerSentence = 5;
@@ -215,6 +233,7 @@ public class GameManager : MonoBehaviour {
 
 	void StartRound() {
 		roundRunning = true;
+		roundTimer = 0f;
 		serv.StartRound(gameObject, "GetRoundStartInfo");
 	}
 
@@ -229,9 +248,11 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void GetRoundEndInfo(string[] results) {
-		int rng = Random.Range(0, results.Length);
-		sentence += results[rng]+ " ";
-		//TODO: display word chosen
+//		int rng = Random.Range(0, results.Length);
+//		sentence += results[rng]+ " ";
+//		//TODO: display word chosen
+//		roundNum++;
+		sentence += slotManager.ChooseWord(results, roundNum) + " ";
 		roundNum++;
 		if (roundNum < wordsPerSentence) {
 			StartRound();
@@ -241,10 +262,22 @@ public class GameManager : MonoBehaviour {
 		}
 	} 
 
+	IEnumerator WaitForHandle(float seconds) {
+		yield return new WaitForSeconds(seconds);
+		lever.PullHandle();
+		slotManager.Spin();
+		yield return new WaitForSeconds(seconds);
+		lever.ReleaseHandle();
+	}
+
 	void EnterBuildingSentence() {
 		sentence = "";
 		roundNum = 0;
 		roundTimer = 0f;
+		slotMachine.gameObject.SetActive(true);
+		slotManager.Reset();
+//		lever.PullHandle();
+		StartCoroutine(WaitForHandle(.5f));
 		StartRound();
 	}
 
@@ -258,15 +291,18 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void ExitBuildingSentence() {
-		//Do Nothing
+//		slotMachine.gameObject.SetActive(false);
 	}
 
 	//----------Speaking------------//
 	void StartSpeech() {
+		Debug.Log("Before clip sent");
+		Debug.Log("sentence: " + sentence);
 		TTS.GetClip(gameObject, sentence, "Speak");
 	}
 
-	void Speak(AudioClip clip) {
+	public void Speak(AudioClip clip) {
+		Debug.Log("Got clip from server");
 		StartCoroutine(WaitForSpeech(clip));
 	}
 
@@ -280,6 +316,7 @@ public class GameManager : MonoBehaviour {
 			break;
 		}
 		yield return new WaitForSeconds(clip.length);
+		Debug.Log("clip finished playing");
 		EnterState(State.ZoomedOut);
 	}
 
@@ -296,5 +333,6 @@ public class GameManager : MonoBehaviour {
 
 	void ExitSpeaking() {
 		//do nothing
+		slotMachine.gameObject.SetActive(false);
 	}
 }

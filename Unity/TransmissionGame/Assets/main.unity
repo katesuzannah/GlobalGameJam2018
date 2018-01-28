@@ -255,7 +255,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotText: {fileID: 863668880}
   me: 2
-  chooser: {fileID: 1517025130}
   slotBlur:
   - {fileID: 21300000, guid: bd11c614c2d310148b3dcc8bc24f3268, type: 3}
   - {fileID: 21300000, guid: e5a4bb7bbddb85e48bc439c8cb4e2fb1, type: 3}
@@ -825,6 +824,58 @@ Transform:
   - {fileID: 1837255424}
   m_Father: {fileID: 244675287}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &166797298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 166797300}
+  - component: {fileID: 166797299}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &166797299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 166797298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9ba56d066ef04defbcea28be676dc3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 466184596}
+  serv: {fileID: 2118906476}
+  slotMachine: {fileID: 456029872}
+  slotManager: {fileID: 1517025130}
+  lever: {fileID: 433072225}
+  TTS: {fileID: 1567560522}
+  Bot1Source: {fileID: 1348484080}
+  Bot2Source: {fileID: 1348484080}
+  TimeBtwnSentences: 3
+  TimeZoomedIn: 2
+  wordsPerSentence: 5
+  TimePerRound: 15
+--- !u!4 &166797300
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 166797298}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 260.04968, y: 136.47188, z: 4.961504}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &181911595
 GameObject:
@@ -1792,7 +1843,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotText: {fileID: 1596990130}
   me: 0
-  chooser: {fileID: 1517025130}
   slotBlur:
   - {fileID: 21300000, guid: bd11c614c2d310148b3dcc8bc24f3268, type: 3}
   - {fileID: 21300000, guid: e5a4bb7bbddb85e48bc439c8cb4e2fb1, type: 3}
@@ -1958,7 +2008,7 @@ GameObject:
   - component: {fileID: 456029871}
   - component: {fileID: 456029870}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: SlotMachine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5944,6 +5994,115 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1332864948}
   m_Mesh: {fileID: 4300028, guid: 91394e4d825f0466d96e541010676e52, type: 3}
+--- !u!1 &1348484079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1348484081}
+  - component: {fileID: 1348484080}
+  m_Layer: 0
+  m_Name: GenericAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1348484080
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1348484079}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &1348484081
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1348484079}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.11, z: -8.16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1350172775
 GameObject:
   m_ObjectHideFlags: 0
@@ -7291,7 +7450,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wordChoice: 
-  serverCommunicator: {fileID: 2118906476}
   wordDisplays:
   - {fileID: 1596990130}
   - {fileID: 181911597}
@@ -7305,7 +7463,6 @@ MonoBehaviour:
   - {fileID: 56959333}
   - {fileID: 1626948986}
   - {fileID: 1589035181}
-  TTS: {fileID: 1567560522}
 --- !u!4 &1517025131
 Transform:
   m_ObjectHideFlags: 0
@@ -8243,7 +8400,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotText: {fileID: 1026780777}
   me: 4
-  chooser: {fileID: 1517025130}
   slotBlur:
   - {fileID: 21300000, guid: bd11c614c2d310148b3dcc8bc24f3268, type: 3}
   - {fileID: 21300000, guid: e5a4bb7bbddb85e48bc439c8cb4e2fb1, type: 3}
@@ -8646,7 +8802,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotText: {fileID: 670086745}
   me: 3
-  chooser: {fileID: 1517025130}
   slotBlur:
   - {fileID: 21300000, guid: bd11c614c2d310148b3dcc8bc24f3268, type: 3}
   - {fileID: 21300000, guid: e5a4bb7bbddb85e48bc439c8cb4e2fb1, type: 3}
@@ -8793,7 +8948,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotText: {fileID: 181911597}
   me: 1
-  chooser: {fileID: 1517025130}
   slotBlur:
   - {fileID: 21300000, guid: bd11c614c2d310148b3dcc8bc24f3268, type: 3}
   - {fileID: 21300000, guid: e5a4bb7bbddb85e48bc439c8cb4e2fb1, type: 3}

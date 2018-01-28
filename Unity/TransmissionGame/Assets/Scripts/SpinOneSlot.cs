@@ -10,7 +10,7 @@ public class SpinOneSlot : MonoBehaviour {
 	public Text slotText;
 	bool spinning;
 	public int me;
-	public ChooseRandomWord chooser;
+//	public ChooseRandomWord chooser;
 
 	int randomSlot;
 	public Sprite [] slotBlur;

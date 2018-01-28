@@ -28,6 +28,7 @@ public class ServerComm : MonoBehaviour {
 	 * return number of players connected
 	 */
 	public void StartRound(GameObject client, string methodName) {
+		Debug.Log("Starting round");
 		StartCoroutine(Upload(client, methodName));
 	}
 
@@ -61,6 +62,7 @@ public class ServerComm : MonoBehaviour {
 	}
 
 	IEnumerator Upload(GameObject client, string methodName) {
+		Debug.Log("Uploading... client: " + client.name + "method: " + methodName);
 		List<IMultipartFormSection> formData = new List<IMultipartFormSection> ();
 		//		string prompt = partsOfSpeech [wordNumber];
 		//		formData.Add (new MultipartFormDataSection ("field1="+prompt));
