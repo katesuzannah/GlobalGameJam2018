@@ -14,7 +14,9 @@ public class GameManager : MonoBehaviour {
 	public HandleAnimation lever;
 	public VoiceRSSTextToSpeech TTS;
 	public AudioSource Bot1Source;
+	public RobotEyes Bot1Eyes;
 	public AudioSource Bot2Source;
+	public RobotEyes Bot2Eyes;
 
 	AudioSource globalSfx;
 
@@ -307,16 +309,21 @@ public class GameManager : MonoBehaviour {
 	}
 
 	IEnumerator WaitForSpeech(AudioClip clip) {
+		RobotEyes flashing = null;
 		switch (currTurn) {
 		case Turn.Bot1:
 			Bot1Source.PlayOneShot(clip);
+			flashing = Bot1Eyes;
 			break;
 		case Turn.Bot2:
 			Bot2Source.PlayOneShot(clip);
+			flashing = Bot2Eyes;
 			break;
 		}
+		flashing.FlashEyes();
 		yield return new WaitForSeconds(clip.length);
 		Debug.Log("clip finished playing");
+		flashing.StopFlashing();
 		EnterState(State.ZoomedOut);
 	}
 

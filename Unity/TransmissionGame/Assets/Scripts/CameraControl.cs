@@ -15,7 +15,7 @@ public class CameraControl : MonoBehaviour {
 	//Transform center;
 	Transform target;
 
-	float speed =5f;
+	public float speed =5f;
 	float startTime;
 	float journeyLength;
 	float distCovered;
@@ -75,15 +75,19 @@ public class CameraControl : MonoBehaviour {
 	public void ZoomIn (int robot) {
 		startTime = Time.time;
 		if (robot==0) {
-			newPos = new Vector3 (-0.054f, 1.213f, -9.2f);
-			newRot = new Vector3 (13.488f, -29.822f, -2.225f);
+			
+//			newPos = new Vector3 (-0.054f, 1.213f, -9.2f);
+//			newRot = new Vector3 (13.488f, -29.822f, -2.225f);
 			target = left;
+
 		}
 		else {
-			newPos = new Vector3 (0.197f, 1.237f, -9.262f);
-			newRot = new Vector3 (11.533f, 16.665f, 2.853f);
+//			newPos = new Vector3 (0.197f, 1.237f, -9.262f);
+//			newRot = new Vector3 (11.533f, 16.665f, 2.853f);
 			target = right;
 		}
+		newPos = target.position;
+		newRot = target.rotation.eulerAngles;
 		journeyLength = Vector3.Distance (startPos, newPos);
 		zoomingIn = true;
 	}
