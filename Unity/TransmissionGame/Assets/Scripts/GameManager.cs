@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-	public CameraController cam;
+//	public CameraController cam;
+	public CameraControl cam;
 
 	public ServerComm serv;
 
@@ -132,7 +133,7 @@ public class GameManager : MonoBehaviour {
 	float btwnSentencesTimer;
 
 	void EnterZoomedOut() {
-		cam.ZoomMain();
+		cam.ZoomOut();
 		btwnSentencesTimer = TimeBtwnSentences;
 	}
 
@@ -157,11 +158,11 @@ public class GameManager : MonoBehaviour {
 		switch (currTurn) {
 		case Turn.Bot1:
 			currTurn = Turn.Bot2;
-			cam.ZoomBot2();
+			cam.ZoomInBot2();
 			break;
 		case Turn.Bot2:
 			currTurn = Turn.Bot1;
-			cam.ZoomBot1();
+			cam.ZoomInBot1();
 			break;
 		}
 	}

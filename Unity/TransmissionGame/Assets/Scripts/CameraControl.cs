@@ -64,6 +64,14 @@ public class CameraControl : MonoBehaviour {
 		}
 	}
 
+	public void ZoomInBot1() {
+		ZoomIn(0);
+	}
+
+	public void ZoomInBot2() {
+		ZoomIn(1);
+	}
+
 	public void ZoomIn (int robot) {
 		startTime = Time.time;
 		if (robot==0) {
