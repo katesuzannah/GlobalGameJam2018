@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ChooseRandomWord : MonoBehaviour {
 
 	public string wordChoice;
-	string[] allWords;
+	//string[] allWords;
 	public ServerComm serverCommunicator;
 	public Text[] wordDisplays;
 	public static int wordCounter;
@@ -26,14 +26,18 @@ public class ChooseRandomWord : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.R)) {
-			ChooseWord ();
-		}
+//		if (Input.GetKeyDown(KeyCode.R)) {
+//			ChooseWord ();
+//		}
 	}
 
-	void ChooseWord () {
-		allWords = serverCommunicator.GetResults ();
-		wordChoice = allWords [Random.Range (0, allWords.Length)];
+	void GetWords () {
+		serverCommunicator.GetResults (gameObject, "ChooseWord");
+	}
+
+	void ChooseWord (string[] words) {
+		//allWords = serverCommunicator.GetResults ();
+		wordChoice = words [Random.Range (0, words.Length)];
 //		Debug.Log (wordChoice);
 		wordDisplays [wordCounter].text = wordChoice;
 //		sentToSlotScript = true;
