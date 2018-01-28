@@ -6,14 +6,14 @@ using UnityEngine.Networking;
 public class InterfaceWithServer : MonoBehaviour {
 
 	public float timer;
-	public string[] partsOfSpeech;
+//	public string[] partsOfSpeech;
 	int count;
 
 	public string baseURL = "https://i6.cims.nyu.edu/~kss394/Digestion/opt/GlobalGameJam2018/JS";
 
 	void Start () {
 		//StartCoroutine (GetWords ());
-		count = 0;
+//		count = 0;
 	}
 		
 	IEnumerator GetWords() {
@@ -29,8 +29,8 @@ public class InterfaceWithServer : MonoBehaviour {
 
 	IEnumerator Upload(int wordNumber) {
 		List<IMultipartFormSection> formData = new List<IMultipartFormSection> ();
-		string prompt = partsOfSpeech [wordNumber];
-		formData.Add (new MultipartFormDataSection ("field1="+prompt));
+//		string prompt = partsOfSpeech [wordNumber];
+//		formData.Add (new MultipartFormDataSection ("field1="+prompt));
 		//formData.Add (new MultipartFormFileSection ("my file data", "myfile.txt"));
 		UnityWebRequest www = UnityWebRequest.Post (baseURL+"/api/startround", formData);
 		yield return www.SendWebRequest ();
@@ -49,16 +49,16 @@ public class InterfaceWithServer : MonoBehaviour {
 //		return partsOfSpeech [wordNumber];
 //	}
 
-	void Update () {
-		if (Input.GetKeyDown(KeyCode.Space)) {
-			StartCoroutine(Upload(count));
-			count++;
-			if (count>partsOfSpeech.Length) {
-				count = 0;
-			}
-		}
-		if (Input.GetKeyDown(KeyCode.E)) {
-			StartCoroutine(GetWords());
-		}
-	}
+//	void Update () {
+//		if (Input.GetKeyDown(KeyCode.Space)) {
+//			StartCoroutine(Upload(count));
+//			count++;
+//			if (count>partsOfSpeech.Length) {
+//				count = 0;
+//			}
+//		}
+//		if (Input.GetKeyDown(KeyCode.E)) {
+//			StartCoroutine(GetWords());
+//		}
+//	}
 }
