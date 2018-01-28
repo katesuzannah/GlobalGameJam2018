@@ -21,9 +21,9 @@ public class SpinOneSlot : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Space)) {
-			spinning = true;
-		}
+//		if (Input.GetKeyDown(KeyCode.Space)) {
+//			StartSpinning()
+//		}
 		if (spinning) {
 			randomSlot = Random.Range (0, 3);
 			slot.sprite = slotBlur [randomSlot];
@@ -37,6 +37,10 @@ public class SpinOneSlot : MonoBehaviour {
 //			chooser.sentToSlotScript = false;
 //			spinning = false;
 //		}
+	}
+
+	public void StartSpinning () {
+		spinning = true;
 	}
 
 	public void StopSpinning () {
