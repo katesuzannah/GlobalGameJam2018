@@ -36,6 +36,7 @@ public class RobotEyes : MonoBehaviour {
 		}
 		else {
 			timer = 0f;
+			myMaterial.material = normal;
 		}
 	}
 
