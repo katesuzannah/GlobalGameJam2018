@@ -18,7 +18,15 @@ public class GameManager : MonoBehaviour {
 	public AudioSource Bot2Source;
 	public RobotEyes Bot2Eyes;
 
-	AudioSource globalSfx;
+	public AudioSource globalSfx;
+
+	public AudioClip zoomIn;
+	public AudioClip zoomOut;
+	public AudioClip reelWin;
+	public AudioClip dialUp;
+	public AudioClip reelLoop;
+	public AudioClip reelSelect;
+	public AudioClip reelStart;
 
 	void Start() {
 		EnterState(State.ZoomedOut);
@@ -142,6 +150,7 @@ public class GameManager : MonoBehaviour {
 	void EnterZoomedOut() {
 		cam.ZoomOut();
 		btwnSentencesTimer = TimeBtwnSentences;
+		globalSfx.PlayOneShot (zoomOut);
 	}
 
 	void RunZoomedOut() {
@@ -161,6 +170,7 @@ public class GameManager : MonoBehaviour {
 
 	void EnterZoomedIn() {
 		zoomedInTimer = TimeZoomedIn;
+		globalSfx.PlayOneShot (zoomIn);
 		//switch turn to new bot and zoom
 		switch (currTurn) {
 		case Turn.Bot1:
@@ -237,11 +247,18 @@ public class GameManager : MonoBehaviour {
 		roundRunning = true;
 		roundTimer = 0f;
 		serv.StartRound(gameObject, "GetRoundStartInfo");
+		StartCoroutine (reelMachine());
 	}
+	IEnumerator reelMachine(){
+		globalSfx.PlayOneShot (reelStart);
+		yield return new WaitForSeconds (reelStart.length);
+		globalSfx.PlayOneShot (reelLoop);
 
+	}
 	void EndRound() {
 		roundRunning = false;
 		serv.GetResults(gameObject, "GetRoundEndInfo");
+		globalSfx.PlayOneShot (reelSelect);
 	}
 
 	public int GetRoundStartInfo() {
@@ -273,6 +290,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void EnterBuildingSentence() {
+		globalSfx.PlayOneShot (reelWin);
 		sentence = "";
 		roundNum = 0;
 		roundTimer = 0f;
@@ -301,6 +319,7 @@ public class GameManager : MonoBehaviour {
 		Debug.Log("Before clip sent");
 		Debug.Log("sentence: " + sentence);
 		TTS.GetClip(gameObject, sentence, "Speak");
+		globalSfx.PlayOneShot (dialUp);
 	}
 
 	public void Speak(AudioClip clip) {
