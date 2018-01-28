@@ -29,13 +29,13 @@ app.post("/api/startround", (req, res) => {
 	console.log('round starting');
 	io.emit('startround', "round starting");
 	isRoundActive = true;
+	wordsSubmitted = [];
 	res.json({players:playersConnected});
 });
 
 //GET /api/endround
 app.get("/api/endround", (req, res) => {
 	console.log('round ending');
-	//TODO: hook into socket
 	io.emit('endround', "round ending");
 	isRoundActive = false;
 	res.json({words:wordsSubmitted});
