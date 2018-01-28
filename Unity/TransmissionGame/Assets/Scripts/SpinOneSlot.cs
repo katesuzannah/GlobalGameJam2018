@@ -27,7 +27,7 @@ public class SpinOneSlot : MonoBehaviour {
 		if (spinning) {
 			randomSlot = Random.Range (0, 3);
 			slot.sprite = slotBlur [randomSlot];
-			Debug.Log (me + " is spinning");
+			//Debug.Log (me + " is spinning");
 		}
 		else {
 			slot.sprite = original;
