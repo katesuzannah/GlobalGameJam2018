@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class ServerComm : MonoBehaviour {
 
-	public string testSentence = "You never digested my ass?";
+	public string testSentence = "You never digested my ass";
 
 	public string baseURL = "robodate.glitch.me";
 
@@ -80,5 +80,4 @@ public class ServerComm : MonoBehaviour {
 			client.SendMessage(methodName, response);
 		}
 	}
-
 }
