@@ -17,9 +17,9 @@ public class RobotEyes : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.W)) {
-			FlashEyes ();
-		}
+//		if (Input.GetKeyDown(KeyCode.W)) {
+//			FlashEyes ();
+//		}
 		if (flashing) {
 			timer += Time.deltaTime;
 			if (timer>.3f) {
