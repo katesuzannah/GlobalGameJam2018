@@ -8,27 +8,42 @@ public class RobotEyes : MonoBehaviour {
 	public Material flash;
 	Renderer myMaterial;
 	bool lit;
-	//public bool flashing;
+	float timer;
+	public bool flashing;
 
 	void Start () {
 		lit = false;
 		myMaterial = GetComponent<Renderer> ();
 	}
-//
-//	void Update () {
-//		if (Input.GetKeyDown(KeyCode.W)) {
-//			FlashEyes ();
-//		}
-//	}
 
-	public void FlashEyes () {
-		if (!lit) {
-			myMaterial.material = flash;
-			lit = true;
+	void Update () {
+		if (Input.GetKeyDown(KeyCode.W)) {
+			FlashEyes ();
+		}
+		if (flashing) {
+			timer += Time.deltaTime;
+			if (timer>.3f) {
+				if (!lit) {
+					myMaterial.material = flash;
+					lit = true;
+				}
+				else {
+					myMaterial.material = normal;
+					lit = false;
+				}
+				timer = 0f;
+			}
 		}
 		else {
-			myMaterial.material = normal;
-			lit = false;
+			timer = 0f;
 		}
+	}
+
+	public void FlashEyes () {
+		flashing = true;
+	}
+
+	public void StopFlashing () {
+		flashing = false;
 	}
 }
