@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ServerComm : MonoBehaviour {
 
-	public string testSentence = "You never digested my ass?";
+	public string testSentence = "You never digested my ass";
 
 	/* 
 	 * End the round on the server
@@ -25,5 +25,4 @@ public class ServerComm : MonoBehaviour {
 	public int StartRound(string gameData) {
 		return Random.Range(1, 20);
 	}
-
 }
