@@ -12,13 +12,17 @@ public class ChooseRandomWord : MonoBehaviour {
 	public static int wordCounter;
 	public bool sentToSlotScript;
 	public SpinOneSlot[] slotScripts;
+	public VoiceRSSTextToSpeech TTS;
+	string finalSentence;
 
 	void Start () {
+//		source = GetComponent<AudioSource> ();
 		sentToSlotScript = false;
 		wordCounter = 0;
 		foreach(Text t in wordDisplays) {
 			t.text = "";
 		}
+		finalSentence = "";
 	}
 
 	void Update () {
@@ -27,7 +31,7 @@ public class ChooseRandomWord : MonoBehaviour {
 		}
 	}
 
-	void ChooseWord() {
+	void ChooseWord () {
 		allWords = serverCommunicator.GetResults ();
 		wordChoice = allWords [Random.Range (0, allWords.Length)];
 //		Debug.Log (wordChoice);
@@ -35,9 +39,20 @@ public class ChooseRandomWord : MonoBehaviour {
 //		sentToSlotScript = true;
 		slotScripts[wordCounter].StopSpinning();
 		wordCounter++;
-
-		if (wordCounter>wordDisplays.Length) {
-			//Sentence is over
+		finalSentence += wordChoice + " ";
+		Debug.Log (wordCounter);
+		if (wordCounter>=wordDisplays.Length) {
+			SayWords (finalSentence);
+			Debug.Log ("HDFSLKHGDS");
 		}
+	}
+
+	void SayWords (string sentence) {
+		TTS.GetClip(gameObject, sentence, "SaySentence");
+	}
+
+	public void SaySentence(AudioClip clip) {
+		TTS.GetComponent<AudioSource>().PlayOneShot (clip);
+		Debug.Log ("SaySentence");
 	}
 }
