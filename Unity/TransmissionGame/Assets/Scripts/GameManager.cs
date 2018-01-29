@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.UI;
+
 public class GameManager : MonoBehaviour {
 
 //	public CameraController cam;
 	public CameraControl cam;
 
 	public ServerComm serv;
+
+	public Text playerCount;
 
 	public Canvas slotMachine;
 	public ChooseRandomWord slotManager;
@@ -261,9 +265,11 @@ public class GameManager : MonoBehaviour {
 		globalSfx.PlayOneShot (reelSelect);
 	}
 
-	public int GetRoundStartInfo() {
+	public string GetRoundStartInfo(string info) {
 		//TODO: display players connected
-		return 0;
+//		return 0;
+		playerCount.text = "Players connected: " + info;
+		return info;
 	}
 
 	public void GetRoundEndInfo(string[] results) {
